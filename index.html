@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html>
+  <!--Задание 1 Разработать React-приложение «Любимый кинофильм», которое будет содержать информацию о Вашем любимом фильме: 
+    название фильма, ФИО режиссера, год выпуска, киностудия, постер и т.д. При разработке приложения необходимо использовать 
+    компоненты, Props, State.-->
+    
 <head>
     <meta charset="utf-8" />
     <title>React</title>
@@ -19,17 +23,47 @@
             text-align: center;
             padding: 10px 20px;
         }
+
+        button {
+            width: 100px;
+            height: 30px;
+            border-radius: 4px;
+            margin: 50px;
+        }
+
+        .on {
+            color: #666;
+            background-color: #ccc;
+            border: 3px #ccc inset;
+        }
+
+        .off {
+            color: #888;
+            background-color: white;
+            border: 3px #ccc outset;
+        }
     </style>
 </head>
 <body>
     <h2>My favourite movie:</h2>
 
-    <div id="movie1"></div>
-
-    <script type="text/babel" src="Movie.jsx"></script>
-
+    <div id="button1"></div>
+    <script type="text/babel" src="ClickButton.jsx">
+    </script>
     <script type="text/babel">
+        ReactDOM.createRoot(
+            document.getElementById("button1")
+        )
+        .render(
+            <React.StrictMode>
+                <ClickButton />
+            </React.StrictMode>           
+        );
+    </script>
 
+    <div id="movie1" style="visibility: hidden"></div>
+    <script type="text/babel" src="Movie.jsx"></script>
+    <script type="text/babel">
         ReactDOM.createRoot(
             document.getElementById("movie1")
         )

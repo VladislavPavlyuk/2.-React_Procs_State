@@ -9,7 +9,6 @@ const Movie = (props) => {
       <p>Release: {props.release}</p>
       <p>Production: {props.production}</p>
       <img src={props.poster} alt="Poster"/>
-      <p>Description: {props.description}</p>
     </div>
   );
 };
@@ -19,6 +18,5 @@ Movie.defaultProps = {
   director: "Vadim Perelman",
   release: 2003,
   production: "Dreamworks LLC.",
-  poster: './assets/pics/House of Sand and Fog.jpg',
-  description: "An abandoned wife is evicted from her house and starts a tragic conflict with her house's new owners."
+  poster: './assets/pics/House of Sand and Fog.jpg'
 };
