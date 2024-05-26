@@ -3,7 +3,7 @@
   <!--Задание 1 Разработать React-приложение «Любимый кинофильм», которое будет содержать информацию о Вашем любимом фильме: 
     название фильма, ФИО режиссера, год выпуска, киностудия, постер и т.д. При разработке приложения необходимо использовать 
     компоненты, Props, State.-->
-    
+
 <head>
     <meta charset="utf-8" />
     <title>React</title>
@@ -47,29 +47,20 @@
 <body>
     <h2>My favourite movie:</h2>
 
-    <div id="button1"></div>
-    <script type="text/babel" src="ClickButton.jsx">
-    </script>
-    <script type="text/babel">
-        ReactDOM.createRoot(
-            document.getElementById("button1")
-        )
-        .render(
-            <React.StrictMode>
-                <ClickButton />
-            </React.StrictMode>           
-        );
-    </script>
-
-    <div id="movie1" style="visibility: hidden"></div>
+    <div id="movie"></div>
     <script type="text/babel" src="Movie.jsx"></script>
     <script type="text/babel">
-        ReactDOM.createRoot(
-            document.getElementById("movie1")
+         const root2 = ReactDOM.createRoot(
+            document.getElementById("movie")
         )
-        .render(
+        root2.render(
             <React.StrictMode>
-                <Movie />
+                <Movie root2={root2}
+                    title = "House of Sand and Fog"
+                    director = "Vadim Perelman"
+                    release = "2003"
+                    production = "Dreamworks LLC."
+                    poster = './assets/pics/House of Sand and Fog.jpg' />
             </React.StrictMode>  
         ); 
     </script>

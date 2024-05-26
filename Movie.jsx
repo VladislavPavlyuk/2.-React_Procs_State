@@ -14,9 +14,9 @@ const Movie = (props) => {
 };
 
 Movie.defaultProps = {
-  title: "House of Sand and Fog",
-  director: "Vadim Perelman",
-  release: 2003,
-  production: "Dreamworks LLC.",
-  poster: './assets/pics/House of Sand and Fog.jpg'
+  title: "empty",
+  director: "empty",
+  release: "empty",
+  production: "empty",
+  poster: "empty",
 };
