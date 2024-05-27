@@ -50,12 +50,12 @@
     <div id="movie"></div>
     <script type="text/babel" src="Movie.jsx"></script>
     <script type="text/babel">
-         const root2 = ReactDOM.createRoot(
+         const root = ReactDOM.createRoot(
             document.getElementById("movie")
         )
-        root2.render(
+        root.render(
             <React.StrictMode>
-                <Movie root2={root2}
+                <Movie root={root}
                     title = "House of Sand and Fog"
                     director = "Vadim Perelman"
                     release = "2003"

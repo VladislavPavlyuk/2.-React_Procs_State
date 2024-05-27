@@ -1,22 +1,26 @@
-// Props представляет коллекцию значений, которые ассоциированы с компонентом.
-// Эти значения позволяют создавать динамические компоненты, которые не зависят от жестко закодированных статических данных.
+class Movie extends React.Component {
 
-const Movie = (props) => {
-  return (
-    <div>
-      <p>Title: {props.title}</p>
-      <p>Director: {props.director}</p>
-      <p>Release: {props.release}</p>
-      <p>Production: {props.production}</p>
-      <img src={props.poster} alt="Poster"/>
-    </div>
-  );
-};
+  constructor(props) {
+      console.log("constructor");
+      super(props);
+      this.state = {   
+        title: "empty",
+        director: "empty",
+        release: "empty",
+        production: "empty",
+        poster: "empty" };
 
-Movie.defaultProps = {
-  title: "empty",
-  director: "empty",
-  release: "empty",
-  production: "empty",
-  poster: "empty",
-};
+  }
+  render() {
+    console.log("render");
+    return (
+        <div>
+          <p>Title: {this.state.title}</p>
+          <p>Director: {this.state.director}</p>
+          <p>Release: {this.state.release}</p>
+          <p>Production: {this.state.production}</p>
+          <img src={this.state.poster} alt="Poster"/>
+        </div>
+    );
+  }
+}
