@@ -4,11 +4,11 @@ class Movie extends React.Component {
       console.log("constructor");
       super(props);
       this.state = {   
-        title: "empty",
-        director: "empty",
-        release: "empty",
-        production: "empty",
-        poster: "empty" };
+        title: props.title,
+        director: props.director,
+        release: props.release,
+        production: props.production,
+        poster: props.poster };
 
   }
   render() {
