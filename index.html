@@ -50,17 +50,20 @@
     <div id="movie"></div>
     <script type="text/babel" src="Movie.jsx"></script>
     <script type="text/babel">
-         const root = ReactDOM.createRoot(
+      const propsValues = {
+            "title"     : "House of Sand and Fog",
+            "director"  : "Vadim Perelman",
+            "release"   : "2003",
+            "production": "Dreamworks LLC.",
+            "poster"    : './assets/pics/House of Sand and Fog.jpg'
+      };
+
+      ReactDOM.createRoot(
             document.getElementById("movie")
         )
-        root.render(
+        .render(
             <React.StrictMode>
-                <Movie root={root}
-                    title = "House of Sand and Fog"
-                    director = "Vadim Perelman"
-                    release = "2003"
-                    production = "Dreamworks LLC."
-                    poster = './assets/pics/House of Sand and Fog.jpg' />
+                <Movie data={propsValues} />
             </React.StrictMode>  
         ); 
     </script>

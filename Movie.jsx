@@ -4,12 +4,12 @@ class Movie extends React.Component {
       console.log("constructor");
       super(props);
       this.state = {   
-        title: props.title,
-        director: props.director,
-        release: props.release,
-        production: props.production,
-        poster: props.poster };
-
+        title: this.props.data.title,
+        director: this.props.data.director,
+        release: this.props.data.release,
+        production: this.props.data.production,
+        poster: this.props.data.poster 
+      };
   }
   render() {
     console.log("render");
